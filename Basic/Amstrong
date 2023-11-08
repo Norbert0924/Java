@@ -1,0 +1,38 @@
+
+
+public class amstrong_number_homework {
+    public static void main(String[] args) {
+        // 153 = 1*1*1 + 5*5*5 + 3*3*3  // 153 is an Armstrong number.
+        // sout ("user ")
+        int n = 153;   // The number we want to check for being an Armstrong number. hard coded value
+        int temp = n;  // Store the original number in 'temp'.
+        int p = 0;     // Initialize 'p' to 0 to store the sum of digit cubes.
+
+// Function to calculate the sum of individual digits
+        while (n > 0) {
+
+            int rem = n % 10;       // Get the last digit of 'n'.
+            //1. rem=3 (n=153%10)
+            //2. rem=5 (n=13%10)
+            //3. rem=1 (n=1%10)
+
+            p = (p) + (rem * rem * rem);  // Cube the digit and add it to 'p'.
+            //1. p=0+3(=rem)^3==27
+            //2. p=27+5(=rem)*3=27+125=152
+            //3. p=152+1(=rem)*3=152+1=153
+            n = n / 10;// Remove the last digit from 'n'.
+            //1. n=15 (n=153/10)
+            //2. n=1   (n=15/10)
+            //3. n=0   (n=1/10=0)
+        }
+// Condition to check whether the value of 'p' equals the user input or not.
+
+        if (temp == p) {
+            System.out.println("Yes. It is an Armstrong No.");
+        } else {
+            System.out.println("No. It is not an Armstrong No.");
+
+
+        }
+    }
+}
