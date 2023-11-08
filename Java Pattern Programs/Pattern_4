@@ -1,0 +1,48 @@
+public class pattern_4 {
+    public static void main(String[] args) {
+/*
+     *
+    **
+   ***
+  ****
+ *****
+******
+      */
+         /*
+
+          *
+         * *
+        * * *
+       * * * *
+      * * * * *
+     * * * * * *
+
+     // Print stars
+     for (int star = 1; star <= row; star++) {
+     System.out.print("*"); //  "* " : Christmas three pattern
+         */
+
+            int numRows = 6; // You need a total of 6 rows to match the pattern.
+            int row = 1; // starting point
+
+            while (row <= numRows) {
+                int spaces = 1;
+                int stars = 1;
+
+                // Print spaces
+                for (int space = 1; space <= numRows - row; space++) {
+                    System.out.print(space);
+                    System.out.print(" ");
+                }
+                // Print stars
+                for (int star = 1; star <= row; star++) {
+                    System.out.print(star);
+                    //System.out.print("*"); //  "* " : Christmas three pattern
+                    System.out.print("* ");
+                }
+
+                System.out.println();
+                row++;
+            }
+    }
+}
