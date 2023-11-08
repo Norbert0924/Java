@@ -1,0 +1,16 @@
+public class incremental_operator_class_1 {
+
+    public static void main(String[] args) {
+
+        int a = 10; // a=a+1 or a+=1 // a++=a+1;
+        // a+=2
+        System.out.println(a++); // 10 a++ or n++ post incremental operator first the value will get printed then increment will be taking place.
+        System.out.println(a); // 11
+
+        int b = 20;
+        System.out.println(++b); // 21// pre incremental operator first value will get incremented then printing will be taking place
+        System.out.println(b); // 21
+        System.out.println(--b);
+    }
+
+}
