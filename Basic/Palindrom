@@ -1,0 +1,43 @@
+public class palindrom_4 {
+        public static void main(String[] args) {
+
+            Scanner scn=new Scanner(System.in);
+            System.out.println("Pls enter the number that has to be checked");
+            // int num=scn.nextInt();
+            
+            int num=3221;
+
+            int temp=num; // storing the number's value in a new variable called temp.
+
+            int r, sum=0; // declaring 2 more variable r (remainder) and sum=0;
+
+            while(num!=0){
+                  r=num%10;
+                        // 1. 3221%10=1 r=1
+                        // 2. 322%10=2 r=2
+                        // 3. 32%10=2 r=2
+                        // 4. 3%10=3 r=3
+
+                sum=sum*10+r;
+                        //1. sum = 0X10+1=1
+                        //2. 1X10+2=12
+                        //3. 12X10+2=122
+                        //4. 122X10+3= sum=1223
+                num/=10;  //= num=num/10
+                        //1. num=3221/10=322
+                        //2. num=322/10=32
+                        //3. num=32/10=3
+                        //4. num=3/10=0
+
+            }
+// sum is reverse of the original number
+            if(temp==sum){
+                System.out.println("palindrome");
+            }
+
+            else{
+                System.out.println("not palindrome");
+            }
+
+        }
+    }
