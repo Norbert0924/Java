@@ -1,0 +1,28 @@
+public class pattern_6 {
+    public static void main(String[] args) {
+
+        /*
+         ******
+          *****
+           ****
+            ***
+             **
+              *
+         */
+
+        int n = 6; // The number of rows
+        int row = n; //
+
+        while (row >= 1) {
+
+            for (int spaces = 1; spaces <= n - row; spaces++) {
+                System.out.print(" ");
+            }
+            for (int stars = 1; stars <= row; stars++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            row--;
+        }
+    }
+}
